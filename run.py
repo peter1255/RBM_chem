@@ -15,3 +15,6 @@ ax1.plot(gbrbm_err)
 ax1.set_xlabel('Epochs')
 ax1.set_ylabel('MSE')
 plt.show()
+
+sims = gbrbm.simulate("simulated.out", confs=10000, postprocess=True)
+
