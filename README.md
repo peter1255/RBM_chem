@@ -77,4 +77,5 @@ This is a fork of https://github.com/meownoid/tensorfow-rbm with many improvemen
 - Introduced scripts which allow the RBM to be used with computational chemistry data. 
 
 AUTHOR: Peter Nekrasov
+
 Please email peter.nekrasov@yale.edu with any questions.
