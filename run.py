@@ -1,9 +1,6 @@
 import numpy as np
-from sklearn import preprocessing
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 from tfrbm import BBRBM, GBRBM, GDBM, GGRBM, ReluRBM, TanhRBM, LeakyReluRBM
-from matplotlib.colors import Normalize
 import tensorflow as tf
 
 confs = np.genfromtxt("h2o_scf.txt")
