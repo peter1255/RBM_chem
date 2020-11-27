@@ -15,10 +15,10 @@ This program will require an input file which contains information about the sys
 confs = np.genfromtxt("h2o_scf.txt")
 ```
 
-If you have continuous-valued data you'll want to shift and scale the data to mean 0 and unit variance. This is done using:
+If you have continuous-valued data you'll want to shift and scale the data to mean 0 and unit variance. Once you create the RBM object (described in the next section) the processing is done using the following object method:
 
 ```
-confs = tanh.preprocess_data(confs)
+confs = gbrbm.preprocess_data(confs)
 ```
 
 The RBM stores the mean and variances of each parameter so that after a simulation is performed at mean 0 and unit variance, the data is then post-processed (shifted and scaled) to match the mean and variance of the original data. 
@@ -31,7 +31,7 @@ Different types of RBMs are available in this package. If you have binary data y
 gbrbm = GBRBM(n_visible=3, n_hidden=12, learning_rate=0.001, err_function='mse')
 ```
 
-In order to train the model you must use the "fit" function found within the RBM subclass:
+In order to train the model you must use the "fit" method found within the RBM subclass:
 
 ```
 err, LL = gbrbm.fit(confs, n_epoches=20, batch_size=20, LL=True)
@@ -49,7 +49,7 @@ plt.show()
 
 ## SIMULATION
 
-In order to generate new samples, we use the simulate function:
+In order to generate new samples, we use the simulate method:
 
 ```
 sims = gbrbm.simulate("h2o_rbm_output.txt", confs=10000, postprocess=True)
