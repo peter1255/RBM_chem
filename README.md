@@ -61,9 +61,20 @@ where we specify the output file and number of configurations. The function also
 
 The following plots show the results of training on large datasets of natural image patches:
 
-![alt text](https://github.com/spooky-pete/RBM_chem/blob/main/reconstruction_error_of_rbms_smoother.png)
+![alt text](https://github.com/peter1255/RBM_chem/blob/main/reconstruction_error_of_rbms_smoother.png)
 
-![alt text](https://github.com/spooky-pete/RBM_chem/blob/main/mle_rbm_comparison_natural_images.png)
+![alt text](https://github.com/peter1255/RBM_chem/blob/main/mle_rbm_comparison_natural_images.png)
 
+## VERSION DETAILS 
+
+This is a fork of https://github.com/meownoid/tensorfow-rbm with many improvements:
+- Created Tanh RBM, ReLU RBM, Leaky ReLU RBM, and Gaussian-Gaussian RBM.
+- Implemented generative modeling to the RBM: able to simulate and generate new configurations after sampling. 
+- Added sigma (variance of visible units) parameter. 
+- Added log-likelihood during training. 
+- Added capability to test the model during training. 
+- Implemented annealed importance sampling and persistent contrastive divergence algorithms. 
+- Introduced scripts which allow the RBM to be used with computational chemistry data. 
 
 AUTHOR: Peter Nekrasov
+Please email peter.nekrasov@yale.edu with any questions.
