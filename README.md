@@ -68,9 +68,9 @@ The following plots show the results of training on large datasets of natural im
 ## VERSION DETAILS 
 
 This is a fork of https://github.com/meownoid/tensorfow-rbm with many improvements:
+- Updated to TensorFlow v2.0.
 - Created Tanh RBM, ReLU RBM, Leaky ReLU RBM, and Gaussian-Gaussian RBM.
 - Implemented generative modeling to the RBM: able to simulate and generate new configurations after sampling. 
-- Added sigma (variance of visible units) parameter. 
 - Added log-likelihood during training. 
 - Added capability to test the model during training. 
 - Implemented annealed importance sampling and persistent contrastive divergence algorithms. 
